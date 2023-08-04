@@ -2,10 +2,11 @@
 
 
 //constructor
-Staff::Staff(int id,string firstName,string lastName,int doh,int bonusCode,int salary){
+Staff::Staff(int id,string firstName,string lastName,int doh,int bonusCode,double salary){
 
     this -> id = id;
     this -> firstName = firstName;
+    this -> lastName = lastName;
     this -> doh = doh;
     this -> bonusCode = bonusCode;
     this -> salary = salary;
@@ -16,11 +17,20 @@ Staff::Staff(int id,string firstName,string lastName,int doh,int bonusCode,int s
 
 
 //methods
-int Staff::Calculate_Salary(){
-
+double Staff::Calculate_Salary(){
+    return salary * (100 + bonusCode) / 100;
 }
 
 void Staff::Print_Stf_Info(){
+
+    cout << "\n\n*********************************\n\n";
+    cout << "id : "<<id<<"\n";
+    cout << "firstname : "<<firstName<<"\n";
+    cout << "lastname : "<<lastName<<"\n";
+    cout << "date of hire : "<< doh << "\n";
+    cout << "bonus code : "<< bonusCode << "\n";
+    cout << "salary : "<< salary << "\n";
+    cout << "\n*********************************\n";
 
 }
 
@@ -42,7 +52,7 @@ int Staff::getDOH(){
 int Staff::getBonusCode(){
     return this -> bonusCode;
 }
-int Staff::getSalary(){
+double Staff::getSalary(){
     return this -> salary;
 }
 
@@ -61,6 +71,6 @@ void Staff::setDOH(int doh){
 void Staff::setBonusCode(int bonus_code){
     this -> bonusCode = bonus_code;
 }
-void Staff::setSalary(int salary){
+void Staff::setSalary(double salary){
     this -> salary = salary;
 }

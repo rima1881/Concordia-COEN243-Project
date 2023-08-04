@@ -12,15 +12,15 @@ private:
     string lastName;
     int doh;
     int bonusCode;
-    int salary;
+    double salary;
 
 public:
 
     //constructor
-    Staff(int id,string firstName,string lastName,int doh,int bonusCode,int salary);
+    Staff(int id,string firstName,string lastName,int doh,int bonusCode,double salary);
 
     //methods
-    int Calculate_Salary();
+    double Calculate_Salary();
     void Print_Stf_Info();
 
     //getters
@@ -28,15 +28,15 @@ public:
     string getFirstName();
     string getLastName();
     int getDOH();
-    int getBonusCode();
-    int getSalary();
+    int  getBonusCode();
+    double getSalary();
 
     //setters
     void setFirstName(string fname);
     void setLastName(string lname);
     void setDOH(int doh);
     void setBonusCode(int bonus_code);
-    void setSalary(int salary);
+    void setSalary(double salary);
 
 };
 
