@@ -1,4 +1,5 @@
-#ifndef Staff
+#ifndef Staff_H
+#define Staff_H
 #include <iostream>
 
 using namespace std;

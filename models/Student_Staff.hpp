@@ -1,4 +1,5 @@
-#ifndef Student_Staff
+#ifndef Student_Staff_H
+#define Student_Staff_H
 
 #include "./Student.hpp"
 #include "./Staff.hpp"
