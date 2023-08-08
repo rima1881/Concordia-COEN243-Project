@@ -1,7 +1,9 @@
 #include "./Student.hpp"
+#include "./program.hpp"
+
 
 //constructor
-Student::Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,string program){
+Student::Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,program &program){
 
     this -> id = id;
     this -> firstName = firstName;
@@ -9,7 +11,7 @@ Student::Student(int id,string firstName,string lastName,int dob,double gpa,int 
     this -> dob = dob;
     this -> gpa = gpa;
     this -> completedCredit = completedCredit;
-    this -> program = program;
+
 
 }
 
@@ -17,13 +19,14 @@ Student::Student(int id,string firstName,string lastName,int dob,double gpa,int 
 //methods
 bool Student::CompleteProgram(){
 
-    if(program == "bachelor")
+    if(this -> prog == bachelor)
         return completedCredit == 140;
-    else if (program == "Master")
+    else if (this -> prog == Master)
         return completedCredit == 16;
-    else
+    else if (this -> prog == PhD)
         return completedCredit == 14;
 
+    return false;
 
 }
 
@@ -40,6 +43,7 @@ string Student::StudentStatus(){
     else
         return "D";
     
+    return nullptr;
 
 }
 
@@ -53,7 +57,7 @@ void Student::Print_Std_Info(){
     cout << "date of birth : "<< dob << "\n";
     cout << "GPA : "<< gpa << "\n";
     cout << "Comleted Credit : "<< completedCredit << "\n";
-    cout << "Program : "<< program << "\n";
+    cout << "Program : "<< this -> prog << "\n";
     cout << "\n*********************************\n";
 
 }
@@ -90,7 +94,19 @@ int Student::getCompletedCredit(){
 }
 
 string Student::getProgram(){
-    return this -> program;
+
+    switch (this -> prog)
+    {
+    case Master:
+        return "Master";
+    case bachelor:
+        return "Bachelor";
+    case PhD:
+        return "Ph.D";
+    }
+
+    return nullptr;
+
 }
 
 //setters
@@ -118,6 +134,6 @@ void Student::setCompletedCredit(int credit){
     this -> completedCredit = credit;
 }
 
-void Student::setProgram(int program){
+void Student::setProgram(program program){
     this -> program = program;
 }

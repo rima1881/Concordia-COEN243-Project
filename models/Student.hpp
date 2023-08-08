@@ -1,8 +1,10 @@
 #ifndef Student_H
 #define Student_H
 #include <iostream>
+#include "./program.hpp"
 
 using namespace std;
+
 
 class Student
 {
@@ -15,13 +17,13 @@ private:
     double gpa;
     int startedYear;
     int completedCredit;
-    string program;
+    program prog;
 
 
 public:
 
     //costructor
-    Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,string program);
+    Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,program &program);
 
 
     //methods
@@ -39,7 +41,7 @@ public:
     double getGPA();
     int getStartedYear();
     int getCompletedCredit();
-    string getProgram();
+    program getProgram();
 
 
     //setters
@@ -49,7 +51,7 @@ public:
     void setGPA(int gpa);
     void setStartedYear(int started_year);
     void setCompletedCredit(int credit);
-    void setProgram(int program);
+    void setProgram(program program);
 
 
 
