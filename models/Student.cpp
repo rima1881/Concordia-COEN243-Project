@@ -3,7 +3,7 @@
 
 
 //constructor
-Student::Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,program &program){
+Student::Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,program program){
 
     this -> id = id;
     this -> firstName = firstName;
@@ -11,7 +11,7 @@ Student::Student(int id,string firstName,string lastName,int dob,double gpa,int 
     this -> dob = dob;
     this -> gpa = gpa;
     this -> completedCredit = completedCredit;
-
+    this -> prog = program;
 
 }
 
@@ -93,19 +93,10 @@ int Student::getCompletedCredit(){
     return this -> completedCredit;
 }
 
-string Student::getProgram(){
+program Student::getProgram(){
 
-    switch (this -> prog)
-    {
-    case Master:
-        return "Master";
-    case bachelor:
-        return "Bachelor";
-    case PhD:
-        return "Ph.D";
-    }
 
-    return nullptr;
+    return this -> prog;
 
 }
 
@@ -135,5 +126,5 @@ void Student::setCompletedCredit(int credit){
 }
 
 void Student::setProgram(program program){
-    this -> program = program;
+    this -> prog = program;
 }

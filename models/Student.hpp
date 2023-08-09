@@ -23,7 +23,7 @@ private:
 public:
 
     //costructor
-    Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,program &program);
+    Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,program program);
 
 
     //methods

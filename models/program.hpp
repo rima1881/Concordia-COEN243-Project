@@ -15,7 +15,7 @@ private:
 public:
 
 
-
+    program(){}
 
     program(programOptions d){
 
