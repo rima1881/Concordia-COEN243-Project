@@ -4,7 +4,7 @@
 amir
 gharibipour
 2000
-4.3
+2
 30
 B
 2020
@@ -14,7 +14,7 @@ B
 reza
 rahimi
 2003
-4.3
+3.6
 30
 M
 2021
@@ -24,7 +24,7 @@ M
 mammad
 saiidi
 1999
-4.3
+2.3
 30
 P
 2019
@@ -44,7 +44,7 @@ B
 ahoora
 stranger
 2004
-4.3
+4.2
 30
 B
 2025

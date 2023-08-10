@@ -3,6 +3,7 @@
 
 #include "./Student.hpp"
 #include "./Staff.hpp"
+#include <vector>
 
 class Student_Staff
 {
@@ -22,9 +23,9 @@ public:
 
 
     //static mothods
-    static void Highest_GPA(Student* students);
-    static Student* N_of_UnderGrad(Student* students);
-    static void Same_Hire_Year(Staff* staff);
+    static void Highest_GPA(Student* students,int size);
+    static vector<Student> N_of_UnderGrad(Student* students,int size);
+    static void Same_Hire_Year(Staff* staff,int size);
 
 };
 

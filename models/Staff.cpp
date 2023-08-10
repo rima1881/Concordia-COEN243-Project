@@ -1,8 +1,11 @@
 #include "./Staff.hpp"
 
+//static props
+int Staff::num = 0;
+
 
 //constructor
-Staff::Staff(){}
+Staff::Staff(){ num++; }
 Staff::Staff(int id,string firstName,string lastName,int doh,int bonusCode,double salary){
 
     this -> id = id;
@@ -11,6 +14,8 @@ Staff::Staff(int id,string firstName,string lastName,int doh,int bonusCode,doubl
     this -> doh = doh;
     this -> bonusCode = bonusCode;
     this -> salary = salary;
+
+    num++;
 
 }
 

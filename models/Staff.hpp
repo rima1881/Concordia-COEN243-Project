@@ -8,6 +8,8 @@ class Staff
 {
 private:
 
+
+    //props
     int id;
     string firstName;
     string lastName;
@@ -16,6 +18,9 @@ private:
     double salary;
 
 public:
+
+    //static props
+    static int num;
 
     //constructor
     Staff(int id,string firstName,string lastName,int doh,int bonusCode,double salary);

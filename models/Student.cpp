@@ -1,6 +1,9 @@
 #include "./Student.hpp"
 #include "./program.hpp"
 
+//static props
+int Student::num = 0;
+
 
 //constructor
 Student::Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,program program){
@@ -13,8 +16,10 @@ Student::Student(int id,string firstName,string lastName,int dob,double gpa,int 
     this -> completedCredit = completedCredit;
     this -> prog = program;
 
+    num++;
+
 }
-Student::Student(){}
+Student::Student(){ num++; }
 
 
 //methods
