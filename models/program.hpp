@@ -19,7 +19,24 @@ public:
 
 
     program(){}
+    program(char p){
 
+        switch (p)
+        {
+        case 'M':
+            this -> data = Master;
+            break;
+        
+        case 'B':
+            this -> data = bachelor;
+            break;
+
+        case 'P':
+            this -> data = PhD;
+
+        }
+
+    }
     program(programOptions d){
 
         this -> data = d;
@@ -29,6 +46,7 @@ public:
     operator programOptions() const {
         return this -> data;
     }
+
 
     void operator=(programOptions p){
         this -> data = p;

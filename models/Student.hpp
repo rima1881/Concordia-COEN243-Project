@@ -50,12 +50,10 @@ public:
     void setFirstName(string fname);
     void setLastName(string lname);
     void setDOB(int dob);
-    void setGPA(int gpa);
+    void setGPA(double gpa);
     void setStartedYear(int started_year);
     void setCompletedCredit(int credit);
     void setProgram(program program);
-
-
 
 };
 

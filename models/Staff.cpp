@@ -2,6 +2,7 @@
 
 
 //constructor
+Staff::Staff(){}
 Staff::Staff(int id,string firstName,string lastName,int doh,int bonusCode,double salary){
 
     this -> id = id;
@@ -59,6 +60,9 @@ double Staff::getSalary(){
 
 
 //setters
+void Staff::setId(int id){
+    this -> id =id;
+}
 void Staff::setFirstName(string fname){
     this -> firstName = fname;
 }

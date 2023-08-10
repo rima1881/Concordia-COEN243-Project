@@ -118,7 +118,7 @@ void Student::setDOB(int dob){
     this -> dob = dob;
 }
 
-void Student::setGPA(int gpa){
+void Student::setGPA(double gpa){
     this -> gpa = gpa;
 }
 

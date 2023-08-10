@@ -19,6 +19,7 @@ public:
 
     //constructor
     Staff(int id,string firstName,string lastName,int doh,int bonusCode,double salary);
+    Staff();
 
     //methods
     double Calculate_Salary();
@@ -33,6 +34,7 @@ public:
     double getSalary();
 
     //setters
+    void setId(int id);
     void setFirstName(string fname);
     void setLastName(string lname);
     void setDOH(int doh);

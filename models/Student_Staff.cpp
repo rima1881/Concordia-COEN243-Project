@@ -9,12 +9,12 @@ Student_Staff::Student_Staff(string student_db_addr,string staff_db_addr){
     cout<<"opening the txt files...\n";
 
     ifstream studentTxt(student_db_addr);
-
+    ifstream staffTxt(staff_db_addr);
 
     cout<<"files opened successfully\n\n";
 
-
-    cout<<"reading the files...";
+    //student part
+    cout<<"reading the students data...\n";
     string line;
     int i;
     int numline;
@@ -22,19 +22,19 @@ Student_Staff::Student_Staff(string student_db_addr,string staff_db_addr){
     getline(studentTxt,line);
     numline = stoi(line);
 
-    int numStudents = --numline/8;
+    int numStudents = --numline/10;
 
     this -> std_list = new Student[numStudents];
 
     int r,m;
-    cout << numline<<"\n\n\n";
 
     for (i = 0;i <= numline ;i++) {
 
-        m = i / 9;
-        r = i % 9;
+        m = i / 10;
+        r = i % 10;
 
         
+
         getline(studentTxt,line);
 
         if(r == 1)
@@ -45,7 +45,7 @@ Student_Staff::Student_Staff(string student_db_addr,string staff_db_addr){
 
         else if(r == 3)
             std_list[m].setLastName(line);
-
+            
         else if(r == 4)
             std_list[m].setDOB(stoi(line));
 
@@ -54,13 +54,61 @@ Student_Staff::Student_Staff(string student_db_addr,string staff_db_addr){
 
         else if(r == 6)
             std_list[m].setCompletedCredit(stoi(line));
-
+        
+        else if(r == 7)
+            std_list[m].setProgram(*(new program(line.c_str()[0])));
+            
+        else if(r == 8)
+            std_list[m].setStartedYear(stoi(line));
+        
 
     }
 
 
 
-    cout<<"reading finished\n\n";
+    cout<<"reading students data finished\n\n";
+
+    //staff part
+    cout<<"reading staff data...\n";
+
+    getline(staffTxt,line);
+    numline = stoi(line);
+
+    numStudents = --numline/8;
+
+    this -> staff_list = new Staff[numStudents];
+
+
+    /*
+    for (i = 0;i <= numline ;i++) {
+
+        m = i / 8;
+        r = i % 8;
+
+        
+        getline(studentTxt,line);
+
+        if(r == 1)
+            staff_list[m].setId(stoi(line));
+
+        else if(r == 2)
+            staff_list[m].setFirstName(line);
+
+        else if(r == 3)
+            staff_list[m].setLastName(line);
+
+        else if(r == 4)
+            staff_list[m].setDOH(stoi(line));
+
+        else if(r == 5)
+            staff_list[m].setBonusCode(stoi(line));
+
+        else if(r == 6)
+            staff_list[m].setSalary(stod(line));
+
+
+    }*/
+
 
 
     cout<<"closing files\n\n";
