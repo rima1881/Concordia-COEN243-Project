@@ -14,6 +14,7 @@ Student::Student(int id,string firstName,string lastName,int dob,double gpa,int 
     this -> prog = program;
 
 }
+Student::Student(){}
 
 
 //methods
@@ -101,6 +102,10 @@ program Student::getProgram(){
 }
 
 //setters
+void Student::setId(int id){
+    this -> id = id;
+}
+
 void Student::setFirstName(string fname){
     this -> firstName = fname;
 }

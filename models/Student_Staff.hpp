@@ -16,6 +16,11 @@ public:
     //constructor
     Student_Staff(string student_db_addr,string staff_db_addr);
 
+    //getters
+    Student* getStudents();
+    Staff* getStaff();
+
+
     //static mothods
     static void Highest_GPA(Student* students);
     static Student* N_of_UnderGrad(Student* students);

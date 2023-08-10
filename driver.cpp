@@ -16,6 +16,8 @@ int main(){
     Student_Staff drive("db/student.txt","db/staff.txt");
 
 
+    cout << drive.getStudents()[2].getFirstName();
+
 
     return 0;
 }

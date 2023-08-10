@@ -1,3 +1,6 @@
+#ifndef program_H
+#define program_H
+
 #include <iostream>
 using namespace std;
 
@@ -59,3 +62,4 @@ public:
     }
 
 };
+#endif

@@ -24,6 +24,7 @@ public:
 
     //costructor
     Student(int id,string firstName,string lastName,int dob,double gpa,int startedYear,int completedCredit,program program);
+    Student();
 
 
     //methods
@@ -45,6 +46,7 @@ public:
 
 
     //setters
+    void setId(int id);
     void setFirstName(string fname);
     void setLastName(string lname);
     void setDOB(int dob);
